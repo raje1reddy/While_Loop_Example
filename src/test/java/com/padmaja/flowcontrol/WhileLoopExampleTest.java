@@ -31,7 +31,7 @@ public class WhileLoopExampleTest {
         }
         @Test
         public void whileLoopExample1() {
-            int result = whileLoopExample.tablesExample(9);
+            int result = whileLoopExample.tablesExample(9,false);
             System.out.println(result);
             int expectedresult = 6;
             assertEquals(expectedresult,result);
@@ -39,7 +39,7 @@ public class WhileLoopExampleTest {
         @Test
         public void WhileLoopExample2() {
             WhileLoopExample whileLoopExample = new WhileLoopExample();
-            int result = whileLoopExample.whileLoopExample2(9);
+            int result = whileLoopExample.whileLoopExample2(9,true);
             System.out.println(result);
             int expectedresult = 9;
             assertEquals(expectedresult,result);
@@ -47,9 +47,9 @@ public class WhileLoopExampleTest {
 
     @Test
     public void whileLoopExample3() {
-        int result = whileLoopExample.tablesExample(99);
+        int result = whileLoopExample.tablesExample(99,true);
         System.out.println(result);
-        int expectedresult = 97;
+        int expectedresult = 99;
         assertEquals(expectedresult,result);
     }
 
@@ -57,22 +57,22 @@ public class WhileLoopExampleTest {
     @Test
     public void WhileLoopExample4() {
         WhileLoopExample whileLoopExample = new WhileLoopExample();
-        int result = whileLoopExample.whileLoopExample2(0);
+        int result = whileLoopExample.whileLoopExample2(0,false);
         System.out.println(result);
-        int expectedresult = 0;
+        int expectedresult = -1;
         assertEquals(expectedresult,result);
     }
     @Test
     public void whileLoopExample5() {
-        int result = whileLoopExample.tablesExample(999);
+        int result = whileLoopExample.tablesExample(999,true);
         System.out.println(result);
-        int expectedresult = 993;
+        int expectedresult = 999;
         assertEquals(expectedresult,result);
     }
 
     @Test
     public void whileLoopExample6() {
-        int result = whileLoopExample.tablesExample(0);
+        int result = whileLoopExample.tablesExample(0,false);
         System.out.println(result);
         int expectedresult = -1;
         assertEquals(expectedresult,result);
@@ -80,15 +80,15 @@ public class WhileLoopExampleTest {
 
     @Test
     public void whileLoopExample7() {
-        int result = whileLoopExample.tablesExample(-9);
+        int result = whileLoopExample.tablesExample(-9,true);
         System.out.println(result);
-        int expectedresult = -15;
+        int expectedresult = -9;
         assertEquals(expectedresult,result);
     }
 
     @Test
     public void whileLoopExample8() {
-        int result = whileLoopExample.tablesExample(-99999999);
+        int result = whileLoopExample.tablesExample(-99999999,false);
         System.out.println(result);
         int expectedresult = -100000006;
         assertEquals(expectedresult,result);
